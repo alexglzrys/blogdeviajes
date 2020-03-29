@@ -1,0 +1,13 @@
+.footer {
+    padding: 1rem 0;
+    background-color: darken($fondo-azul, 20);
+    &__container {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        text-align: center;
+    }
+    &__content {
+        color: #fff;
+    }
+}

@@ -1,0 +1,48 @@
+.hero {
+    height: 100vh;
+    background-image: url(images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(#000, .3);
+    }
+    &__container {
+        max-width: 1024px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        @include phone {
+            justify-content: flex-start;
+        }
+    }
+    &__title {
+        font-family: 'Baloo Thambi 2', cursive;
+        color: $color-blanco;
+        position: relative;
+        font-size: 1.3rem;
+        font-weight: 500;
+        line-height: 1.8rem;
+        transform: translateY(30px);
+        padding: 1rem;
+        @include tablet {
+            font-size: 1.5rem;
+        }
+        @include phone {
+            text-align: left;
+        }
+        @include desktop {
+            font-size: 2rem;
+            line-height: 2.2rem;
+        }
+    }
+}

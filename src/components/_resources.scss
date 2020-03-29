@@ -1,0 +1,81 @@
+.resources {
+    background-color: $fondo-gris;
+    padding: 2rem 0;
+    &__container {
+        max-width: 1024px;
+        margin: 0 auto;
+        @include desktop {
+            padding: 0 1rem;
+        }
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        @include tablet {
+            flex-wrap: nowrap;
+        }
+    }
+    &__item {
+        width: 50%;
+        &:nth-child(1) {
+            & * {
+                background-color: $fondo-azul;
+                &:hover {
+                    background-color: darken($fondo-azul, 10);
+                }
+                &:before {
+                    content: '\f276';
+                }
+            }
+        }
+        &:nth-child(2) {
+            & * {
+                background-color: $color-rosa;
+                &:hover {
+                    background-color: darken($color-rosa, 10);
+                }
+                &:before {
+                    content: '\f001';
+                }
+            }
+        }
+        &:nth-child(3) {
+            & * {
+                background-color: $color-morado;
+                &:hover {
+                    background-color: darken($color-morado, 10);
+                }
+                &:before {
+                    content: '\f2e7';
+                }
+            }
+        }
+        &:nth-child(4) {
+            & * {
+                background-color: $color-naranja;
+                &:hover {
+                    background-color: darken($color-naranja, 10);
+                }
+                &:before {
+                    content: '\f00c';
+                }
+            }
+        }
+    }
+    &__link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        padding: .5rem;
+        height: 150px;
+        transition: all .5s;
+        &:before {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 3rem;
+            margin-bottom: .5rem;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.news {
+    padding: 3em 0;
+    background-color: $fondo-azul;
+    &__container {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+.new {
+    margin-bottom: 2.5rem;
+    color: #fff;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include tablet {
+        width: calc(33.33% - 1rem);
+        margin-bottom: 0;
+    }
+    &__title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.8rem;
+    }
+    &__text {
+        margin-bottom: 1rem;
+        line-height: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__post {
+        padding: .3rem 0;
+    }
+    &__post-link {
+        color: #fff;
+        display: block;
+        line-height: 1.5rem;
+        position: relative;
+        padding-left: 2rem;
+        &:before {
+            content: '\f4d5';
+            font-family: 'Font Awesome 5 Brands';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__social {
+        margin-right: 1rem;
+        @include desktop {
+            margin-right: 1.5rem;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__social-link {
+        color: #fff;
+        font-size: 2rem;
+        line-height: 1;
+        font-family: 'Font Awesome 5 Brands';
+        display: block;
+        transition: all .5s;
+        &:hover {
+            color: #ddd;
+        }
+    }
+    &__social-link[href*='facebook']:before {
+        content: '\f082';
+    }
+    &__social-link[href*='twitter']:before {
+        content: '\f081';
+    }
+    &__social-link[href*='youtube']:before {
+        content: '\f431';
+    }
+    &__social-link[href*='instagram']:before {
+        content: '\f955';
+    }
+    &__social-link[href*='pinterest']:before {
+        content: '\f0d3';
+    }
+}

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi+2:400,500,600,700,800&display=swap');
+
+// Variables
+@import "variables";
+// Mixins
+@import "mixins/queries";
+// Components
+@import "components/global";
+@import "components/header";
+@import "components/hero";
+@import "components/blog";
+@import "components/resources";
+@import "components/news";
+@import "components/footer";
